@@ -18,7 +18,7 @@ export default function ViewStudent() {
       axios
         .get("http://localhost:3001/student/")
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setStudents(res.data);
         })
         .catch((err) => {
@@ -91,7 +91,7 @@ export default function ViewStudent() {
                 >
                   Edit
                 </button> */}
-                <Link to = {`/Update/${std._id}`} className="btn btn-success">Edit</Link>
+                <Link to = {`/Update/`+std._id} className="btn btn-success">Edit</Link>
                 <button
                   className="btn btn-danger ml-3 mt-1"
                   onClick={() => {
